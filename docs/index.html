@@ -36,6 +36,10 @@
 				padding: 2rem 0;
 			}
 		</style>
+		<script type="text/javascript">
+			var woodPhotos = ["_S7A9237.jpg","_S7A9251.jpg","_S7A9275.jpg","_S7A9282.jpg","_S7A9284.jpg","_S7A9305.jpg","_S7A9317.jpg","_S7A9330.jpg","_S7A9334.jpg"];
+			var bricksPhotos = ["_S7A9038.jpg","_S7A9072half.jpg","_S7A9106.jpg","_S7A9119.jpg","_S7A9135.jpg","_S7A9144.jpg","_S7A9166.jpg","_S7A9174.jpg","_S7A9183.jpg","_S7A9191.jpg"];
+		</script>
 	</head>
 	<body>
 		<div id="top">
@@ -50,67 +54,93 @@
 				</div>
 			</section>
 		</div>
-		<main class="container">
+		<main>
 			<section>
-				<h2 class="heading">STUDIO PHOTOS</h2>
-				<div class="row">
-				</div>
-			</section>
-
-			<section>
-				<h2 class="heading">OUR SERVICES</h2>
-				<div class="row">
-					<div class="col-md-6">
-						スタジオ使用料
-			                     1時間    スチール   ¥8,000.
-				                  ムービー  ¥10,000.			
+				<div class="container-fluid">
+					<h2 class="heading">STUDIO PHOTOS</h2>
+					<div style="overflow: hidden; margin-left: -15px; margin-right: -15px;">
+						<h3 class="text-center">ウッド館</h3>
+						<div style="overflow-x: auto;">
+							<ul class="list-inline" style="white-space: nowrap;">
+								<script type="text/javascript">
+									woodPhotos.forEach(function(element, index){
+										document.write ('<li class="list-inline-item"><img style="max-width:300px;" src="img/wood/' + element + '" alt="STUDIO PHOTOS - wood' + index + '"></li>');
+									});
+								</script>
+							</ul>
+						</div>
 					</div>
-
-					<div class="col-md-6">
-						レンガ館とウッド館併用の場合
-			                   スチール¥10,000.
-			                   ムービー¥13,000.
+					<div style="overflow: hidden; margin-left: -15px; margin-right: -15px;">
+						<h3 class="text-center">レンガ館</h3>
+						<div style="overflow-x: auto;">
+							<ul class="list-inline" style="white-space: nowrap;">
+								<script type="text/javascript">
+									bricksPhotos.forEach(function(element, index){
+										document.write ('<li class="list-inline-item"><img style="max-width:300px;" src="img/bricks/' + element + '" alt="STUDIO PHOTOS - wood' + index + '"></li>');
+									});
+								</script>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<aside class="divider">
-				
-			</aside>
+			<div class="container">
+				<section>
+					<h2 class="heading">OUR SERVICES</h2>
+					<div class="row">
+						<div class="col-md-6">
+							スタジオ使用料
+				                     1時間    スチール   ¥8,000.
+					                  ムービー  ¥10,000.			
+						</div>
 
-			<section>
-				<h2 class="heading">ご利用につきまして</h2>
-				<div>
-					・ご利用時間は24時間いつでも可能です。ただし早朝深夜は、音のボリュームにご配慮ください。
-					・お支払は現金でお願い致します。
-					・スタジオ内は全面禁煙となっております。
-					・公序良俗に反する撮影はお断りいたします。
+						<div class="col-md-6">
+							レンガ館とウッド館併用の場合
+				                   スチール¥10,000.
+				                   ムービー¥13,000.
+						</div>
+					</div>
+				</section>
 
-					【キャンセル料】
-					7日前までは無料です。前日までは予約時間の20% 、当日は50%を頂戴いたします。
-					延期の場合は前日までは無料で当日は20%となります。
-				</div>
-				<div>
-					ご予約・お問い合わせは090-9166-4528  
+				<aside class="divider">
+					
+				</aside>
 
-					千里山ワークススタジオ佐藤宛			
-				</div>
-			</section>
+				<section>
+					<h2 class="heading">ご利用につきまして</h2>
+					<div>
+						・ご利用時間は24時間いつでも可能です。ただし早朝深夜は、音のボリュームにご配慮ください。
+						・お支払は現金でお願い致します。
+						・スタジオ内は全面禁煙となっております。
+						・公序良俗に反する撮影はお断りいたします。
 
-			<section>
-				<h2 class="heading">ACCESS</h2>
-				<div>
-					千里山ワークスタジオ
+						【キャンセル料】
+						7日前までは無料です。前日までは予約時間の20% 、当日は50%を頂戴いたします。
+						延期の場合は前日までは無料で当日は20%となります。
+					</div>
+					<div>
+						ご予約・お問い合わせは090-9166-4528  
 
-					住所  大阪府吹田市千里山西3-10-14
+						千里山ワークススタジオ佐藤宛			
+					</div>
+				</section>
 
-					電話 090-9166-4528
+				<section>
+					<h2 class="heading">ACCESS</h2>
+					<div>
+						千里山ワークスタジオ
 
-					営業時間 24h
+						住所  大阪府吹田市千里山西3-10-14
 
-					休業日 なし
-				</div>
-			</section>
+						電話 090-9166-4528
+
+						営業時間 24h
+
+						休業日 なし
+					</div>
+				</section>				
+			</div>
 		</main>
 <a href="http://markup.themewagon.com/titan/index_restaurant.html" target="_blank">参考リンク</a>
 		<!-- Optional JavaScript -->
