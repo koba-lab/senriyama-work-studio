@@ -15,7 +15,11 @@
 		<style type="text/css">
 			body {
 				background-color: #333;
+				color: #fff;
 				font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", 和文フォント指定, sans-serif;
+			}
+			.card {
+				color: #333;
 			}
 			section {
 				margin-bottom: 10rem;
@@ -80,8 +84,8 @@
 						<img class="img-fluid" src="images/logo.png" alt="千里山ワークスタジオ | 大阪千里山にあるアーリーアメリカンスタイルのハウススタジオ">
 					</div>
 					<p>
-						阪急千里線 千里山駅徒歩7分、北大阪急行緑地公園駅徒歩10分。
-						車でも新御堂線緑地公園出口より3分と便利な立地。レンガタイル造りのレンガ館と板張りのウッド館の2棟からなるアーリーアメリカンスタイルのハウススタジオです。
+						阪急千里線 千里山駅徒歩7分、北大阪急行緑地公園駅徒歩10分。車でも新御堂線緑地公園出口より3分と便利な立地。<br>
+						レンガタイル造りのレンガ館と板張りのウッド館の2棟からなるアーリーアメリカンスタイルのハウススタジオです。
 					</p>
 					<a class="btn btn-danger btn-lg" href="tel:090-9166-4528"><i class="fa fa-phone" aria-hidden="true"></i> ご予約はこちら: 090-9166-4528</a>
 				</div>
@@ -121,74 +125,80 @@
 			<div class="container">
 				<section>
 					<h2 class="heading">OUR SERVICES</h2>
-					<div class="row">
-						<div class="col-md-6 mb-5">
-							<div class="card text-center">
-								<h4 class="card-header">スタジオ使用料</h4>
-								<div class="card-body">
-									<div>
-										スチール   ¥8,000 / 1時間<br />
-										ムービー  ¥10,000 / 1時間
-									</div>
-								</div>
-							</div>
-						</div>
+					<table class="table mb-5">
+						<tr>
+							<td></td>
+							<td>各スタジオ使用料</td>
+							<td>レンガ館とウッド館併用の場合</td>
+						</tr>
+						<tr>
+							<td>スチール</td>
+							<td>¥8,000 / 1時間</td>
+							<td>¥10,000 / 1時間</td>
+						</tr>
+						<tr>
+							<td>ムービー</td>
+							<td>¥10,000 / 1時間</td>
+							<td>¥13,000 / 1時間</td>
+						</tr>
+					</table>
 
-						<div class="col-md-6 mb-5">
-							<div class="card text-center">
-								<h4 class="card-header">レンガ館とウッド館併用の場合</h4>
-								<div class="card-body">
-									<div>
-										スチール ¥10,000 / 1時間<br />
-										ムービー ¥13,000 / 1時間
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<h4 class="card-header text-center">ご利用につきまして</h4>
-						<div class="card-body">
+					<div>
+						<h4 class="text-center mb-4">ご利用につきまして</h4>
+						<div class="px-4 pt-4">
 							<ul>
 								<li>ご利用時間は24時間いつでも可能です。ただし早朝深夜は、音のボリュームにご配慮ください。</li>
 								<li>お支払は現金でお願い致します。</li>
 								<li>スタジオ内は全面禁煙となっております。</li>
 								<li>公序良俗に反する撮影はお断りいたします。</li>
 							</ul>
-							<p>
+							<p class="mb-4">
 								<strong>【キャンセル料】</strong><br>
 								7日前までは無料です。前日までは予約時間の20% 、当日は50%を頂戴いたします。<br />
 								延期の場合は前日までは無料で当日は20%となります。
 							</p>
-							<div>
-								<p>ご予約・お問い合わせは090-9166-4528</p>
+							<div class="text-center px-4 pt-4">
+								<h5 class="mb-4">ご予約・お問い合わせはこちら</h5>
+								<a class="btn btn-danger btn-lg mb-4" href="tel:090-9166-4528"><i class="fa fa-phone" aria-hidden="true"></i> 090-9166-4528</a>
 								<p>千里山ワークススタジオ佐藤宛</p>
 							</div>
-						</div
+						</div>
+					</div>
+				</section>
+
+				<section id="access">
+					<h2 class="heading">ACCESS</h2>
+					<div class="row">
+						<div class="col-sm-6 text-light">
+							<address>
+								<h3 class="mb-4">千里山ワークスタジオ</h3>
+								<dl>
+									<dt>住所</dt>
+									<dd>大阪府吹田市千里山西3-10-14</dd>
+
+									<dt>電話</dt>
+									<dd>090-9166-4528</dd>
+
+									<dt>営業時間</dt>
+									<dd>24時間</dd>
+
+									<dt>休業日</dt>
+									<dd>なし</dd>
+								</dl>
+							</address>
+						</div>
+						<div class="col-sm-6">
+							<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1638.6086595797515!2d135.5016268873582!3d34.77530402282105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e4c180514993%3A0x4b57d242d2d29440!2z44CSNTY1LTA4NTEg5aSn6Ziq5bqc5ZC555Sw5biC5Y2D6YeM5bGx6KW_77yT5LiB55uu77yR77yQ4oiS77yR77yU!5e0!3m2!1sja!2sjp!4v1512530144437" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
 					</div>
 				</section>
 			</div>
-
-			<section id="access">
-				<h2 class="heading">ACCESS</h2>
-				<div class="container-fluid mb-5">
-					<div class="row">
-						<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1638.6086595797515!2d135.5016268873582!3d34.77530402282105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e4c180514993%3A0x4b57d242d2d29440!2z44CSNTY1LTA4NTEg5aSn6Ziq5bqc5ZC555Sw5biC5Y2D6YeM5bGx6KW_77yT5LiB55uu77yR77yQ4oiS77yR77yU!5e0!3m2!1sja!2sjp!4v1512530144437" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div class="container text-light">
-					千里山ワークスタジオ
-
-					住所  大阪府吹田市千里山西3-10-14
-
-					電話 090-9166-4528
-
-					営業時間 24h
-
-					休業日 なし
-				</div>
-			</section>				
 		</main>
+		<footer class="text-center">
+			<div class="p-5">
+				© 千里山ワークスタジオ
+			</div>
+		</footer>
 <a href="http://markup.themewagon.com/titan/index_restaurant.html" target="_blank">参考リンク</a>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
