@@ -68,10 +68,6 @@
 				height: 25rem;
 			}
 		</style>
-		<script type="text/javascript">
-			var woodPhotos = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"];
-			var bricksPhotos = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"];
-		</script>
 	</head>
 	<body>
 		<div id="top">
@@ -99,17 +95,20 @@
 								<h3 class="text-light">ウッド館</h3>
 							</div>
 							<div class="col-sm-6">
-								ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。ここにウッド館の特徴を記載した文章が入ります。
+								<p>木立のなかに建つ木張りの外観をいかしたオープンロケができます。</p>
+								<p>
+									1Fのリビングルームと2Fのアンティーク調の小リビングルームを使い分けながらテイストのことなる2つの個室が撮影シーン幅をひろげます。
+								</p>
 							</div>
 						</div>
 						<div class="mb-5" style="overflow: hidden; margin-left: -15px; margin-right: -15px;">
 							<div style="overflow-x: auto;">
-								<ul class="list-inline" style="white-space: nowrap;">
-									<script type="text/javascript">
-										woodPhotos.forEach(function(element, index){
-											document.write ('<li class="list-inline-item"><a href="images/slider_wood_' + element + '" target="_blank"><img class="img-fluid" src="images/slider_wood_' + element + '" alt="STUDIO PHOTOS - wood' + index + '"></a></li>');
-										});
-									</script>
+								<ul id="image-slider-wood" class="list-inline" style="white-space: nowrap;">
+									<li class="list-inline-item" v-for="(image, index) in images">
+										<a v-bind:href="'images/slider_wood_' + image.name" target="_blank">
+											<img class="img-fluid" v-bind:src="'images/slider_wood_' + image.name" v-bind:alt="'STUDIO PHOTOS - wood' + (index + 1)">
+										</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -120,17 +119,21 @@
 								<h3 class="text-light">レンガ館</h3>
 							</div>
 							<div class="col-sm-6">
-								ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。ここにレンガ館の特徴を記載した文章が入ります。
+								<p>暖炉を備えたリビングルームは上質な生活シーンを演出します。</p>
+								<p>
+									L字型のキッチンは引きも十分で明るく暖かみのある絵作りができ、
+									バスルームも明るく清潔感に溢れています。
+								</p>
 							</div>
 						</div>
 						<div style="overflow: hidden; margin-left: -15px; margin-right: -15px;">
 							<div style="overflow-x: auto;">
-								<ul class="list-inline" style="white-space: nowrap;">
-									<script type="text/javascript">
-										bricksPhotos.forEach(function(element, index){
-											document.write ('<li class="list-inline-item"><a href="images/slider_bricks_' + element + '" target="_blank"><img class="img-fluid" src="images/slider_bricks_' + element + '" alt="STUDIO PHOTOS - wood' + index + '"></a></li>');
-										});
-									</script>
+								<ul id="image-slider-bricks" class="list-inline" style="white-space: nowrap;">
+									<li class="list-inline-item" v-for="(image, index) in images">
+										<a v-bind:href="'images/slider_bricks_' + image.name" target="_blank">
+											<img class="img-fluid" v-bind:src="'images/slider_bricks_' + image.name" v-bind:alt="'STUDIO PHOTOS - bricks' + (index + 1)">
+										</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -228,11 +231,25 @@
 				© 千里山ワークスタジオ
 			</div>
 		</footer>
-<a href="http://markup.themewagon.com/titan/index_restaurant.html" target="_blank">参考リンク</a>
 		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.11" type="text/javascript"></script>
+		<script type="text/javascript">
+			var imageSliderWood = new Vue({
+				el: "#image-slider-wood",
+				data: {
+					images: [
+						{name:"1.jpg"},{name:"2.jpg"},{name:"3.jpg"},{name:"4.jpg"},{name:"5.jpg"},{name:"6.jpg"},{name:"7.jpg"},{name:"8.jpg"},{name:"9.jpg"}
+					]
+				}
+			});
+			var imageSliderBricks = new Vue({
+				el: "#image-slider-bricks",
+				data: {
+					images: [
+						{name:"1.jpg"},{name:"2.jpg"},{name:"3.jpg"},{name:"4.jpg"},{name:"5.jpg"},{name:"6.jpg"},{name:"7.jpg"},{name:"8.jpg"},{name:"9.jpg"},{name:"10.jpg"}
+					]
+				}
+			});			
+		</script>
 	</body>
 </html>
