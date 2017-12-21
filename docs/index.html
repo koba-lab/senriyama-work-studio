@@ -34,7 +34,7 @@
 				background-size: cover;
 				background-color: #464646;
 			}
-			#home-section .overlay {
+			.overlay {
 				position: absolute;
 				z-index: 1;
 				width: 100%;
@@ -63,6 +63,33 @@
 				opacity: .75;
 			}
 
+			.bg-image {
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				min-height: 30rem;
+			}
+			.bg-image-wood {
+				background-image: url(images/bg-image-wood.jpg);
+			}
+			.bg-image-bricks {
+				background-image: url(images/bg-image-bricks.jpg);
+			}
+
+			.bg-image-wood .row {
+				z-index: 2;
+			}
+
+			.l-image-slider {
+
+			}
+
+			.image-slider {
+				overflow-x: auto;
+				white-space: nowrap;
+			}
+
 			#access .map {
 				width: 100%;
 				height: 25rem;
@@ -88,54 +115,56 @@
 		<main>
 			<section class="bg-dark pb-10">
 				<div id="studio-photos" class="container-fluid">
-					<h2 class="heading">FEATURES</h2>
+					<h2 class="heading">STUDIOS</h2>
 					<section class="mb-5">
-						<div class="row mb-4">
-							<div class="col-sm-6 d-flex align-items-center justify-content-center">
-								<h3 class="text-light">ウッド館</h3>
-							</div>
-							<div class="col-sm-6">
-								<p>木立のなかに建つ木張りの外観をいかしたオープンロケができます。</p>
-								<p>
-									1Fのリビングルームと2Fのアンティーク調の小リビングルームを使い分けながらテイストのことなる2つの個室が撮影シーン幅をひろげます。
-								</p>
+						<div class="mb-4 row bg-image bg-image-wood position-relative">
+							<div class="overlay"></div>
+							<div class="row align-items-center justify-content-center">
+								<div class="col-sm-6 d-flex align-items-center justify-content-center">
+									<h3 class="text-light py-5">ウッド館</h3>
+								</div>
+								<div class="col-sm-6">
+									<p>木立のなかに建つ木張りの外観をいかしたオープンロケができます。</p>
+									<p>
+										1Fのリビングルームと2Fのアンティーク調の小リビングルームを使い分けながらテイストのことなる2つの個室が撮影シーン幅をひろげます。
+									</p>
+								</div>
 							</div>
 						</div>
-						<div class="mb-5" style="overflow: hidden; margin-left: -15px; margin-right: -15px;">
-							<div style="overflow-x: auto;">
-								<ul id="image-slider-wood" class="list-inline" style="white-space: nowrap;">
-									<li class="list-inline-item" v-for="(image, index) in images">
-										<a v-bind:href="'images/slider_wood_' + image.name" target="_blank">
-											<img class="img-fluid" v-bind:src="'images/slider_wood_' + image.name" v-bind:alt="'STUDIO PHOTOS - wood' + (index + 1)">
-										</a>
-									</li>
-								</ul>
-							</div>
+						<div class="mb-5" class="l-image-slider row">
+							<ul id="image-slider-wood" class="list-inline image-slider">
+								<li class="list-inline-item" v-for="(image, index) in images">
+									<a v-bind:href="'images/slider_wood_' + image.name" target="_blank">
+										<img class="img-fluid" v-bind:src="'images/slider_wood_' + image.name" v-bind:alt="'STUDIO PHOTOS - wood' + (index + 1)">
+									</a>
+								</li>
+							</ul>
 						</div>
 					</section>
-					<section>
-						<div class="row mb-4">
-							<div class="col-sm-6 d-flex align-items-center justify-content-center">
-								<h3 class="text-light">レンガ館</h3>
-							</div>
-							<div class="col-sm-6">
-								<p>暖炉を備えたリビングルームは上質な生活シーンを演出します。</p>
-								<p>
-									L字型のキッチンは引きも十分で明るく暖かみのある絵作りができ、
-									バスルームも明るく清潔感に溢れています。
-								</p>
+					<section class="my-5">
+						<div class="mb-4 row bg-image bg-image-wood position-relative">
+							<div class="overlay"></div>
+							<div class="row align-items-center justify-content-center">
+								<div class="col-sm-6 d-flex align-items-center justify-content-center">
+									<h3 class="text-light py-5">レンガ館</h3>
+								</div>
+								<div class="col-sm-6">
+									<p>暖炉を備えたリビングルームは上質な生活シーンを演出します。</p>
+									<p>
+										L字型のキッチンは引きも十分で明るく暖かみのある絵作りができ、
+										バスルームも明るく清潔感に溢れています。
+									</p>
+								</div>
 							</div>
 						</div>
-						<div style="overflow: hidden; margin-left: -15px; margin-right: -15px;">
-							<div style="overflow-x: auto;">
-								<ul id="image-slider-bricks" class="list-inline" style="white-space: nowrap;">
-									<li class="list-inline-item" v-for="(image, index) in images">
-										<a v-bind:href="'images/slider_bricks_' + image.name" target="_blank">
-											<img class="img-fluid" v-bind:src="'images/slider_bricks_' + image.name" v-bind:alt="'STUDIO PHOTOS - bricks' + (index + 1)">
-										</a>
-									</li>
-								</ul>
-							</div>
+						<div class="mb-5" class="l-image-slider row">
+							<ul id="image-slider-bricks" class="list-inline image-slider">
+								<li class="list-inline-item" v-for="(image, index) in images">
+									<a v-bind:href="'images/slider_bricks_' + image.name" target="_blank">
+										<img class="img-fluid" v-bind:src="'images/slider_bricks_' + image.name" v-bind:alt="'STUDIO PHOTOS - bricks' + (index + 1)">
+									</a>
+								</li>
+							</ul>
 						</div>
 					</section>
 				</div>
