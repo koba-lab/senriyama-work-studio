@@ -12,9 +12,10 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 		<style type="text/css">
 			body {
-				font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", 和文フォント指定, sans-serif;
+				font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", 和文フォント指定, sans-serif;
 			}
 			.bg-dark {
 				color: #fff;
@@ -24,9 +25,9 @@
 			}
 
 			#home-section {
+				height: 100vh;
 				position: relative;
 				color: #fff;
-				min-height: 30rem;
 				background-image: url(images/top.jpg);
 				background-position: center center;
 				background-repeat: no-repeat;
@@ -42,14 +43,13 @@
 				background-color: rgba(0,0,0,0.5);
 			}
 
-			#home-section .container {
+			#home-section .top-item {
 				z-index: 2;
 			    position: relative;
-				padding-top: 15rem;
-				padding-bottom: 15rem;
 			}
 			.heading {
 				text-align: center;
+				font-family: 'Lobster', cursive;
 				padding: 5rem 0;
 			}
 
@@ -73,7 +73,8 @@
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-size: cover;
-				min-height: 25rem;
+				height: 50vh;
+				min-height: 20rem;
 			}
 			.bg-image-wood {
 				background-image: url(images/bg-image-wood.jpg);
@@ -103,59 +104,33 @@
 	</head>
 	<body>
 		<div id="top">
-			<section class="mb-0" id="home-section">
-				<div class="overlay"></div>
-				<div class="container text-center">
-					<div class="mb-4">
-						<img class="img-fluid" src="images/logo.png" alt="千里山ワークスタジオ | 大阪千里山にあるアーリーアメリカンスタイルのハウススタジオ">
-					</div>
+			<section class="mb-0 text-center d-flex flex-column justify-content-center" id="home-section">
+				<div class="top-item mb-4">
+					<img class="img-fluid" src="images/logo.png" alt="千里山ワークスタジオ | 大阪千里山にあるアーリーアメリカンスタイルのハウススタジオ">
+				</div>
+				<div class="top-item container">
 					<p>
 						阪急千里線 千里山駅徒歩7分、北大阪急行緑地公園駅徒歩10分。車でも新御堂線緑地公園出口より3分と便利な立地。<br>
 						レンガタイル造りのレンガ館と板張りのウッド館の2棟からなるアーリーアメリカンスタイルのハウススタジオです。
 					</p>
+				</div>
+				<div class="top-item">
 					<a class="btn btn-danger btn-lg" href="tel:090-9166-4528"><i class="fa fa-phone" aria-hidden="true"></i> ご予約はこちら: 090-9166-4528</a>
 				</div>
+				<div class="overlay"></div>
 			</section>
 		</div>
 		<main>
-			<section class="bg-dark pb-10">
-				<h2 class="heading">STUDIOS</h2>
+			<section class="bg-dark">
+				<h2 class="heading h1">STUDIOS</h2>
 				<div id="studio-photos">
-					<!-- ウッド館 -->
-					<section class="mb-5 l-wood-slider">
-						<div class="mb-4 bg-image bg-image-wood position-relative d-flex align-items-center">
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-sm-6 d-flex align-items-center justify-content-center">
-										<h3 class="text-light py-5">ウッド館</h3>
-									</div>
-									<div class="col-sm-6">
-										<p>木立のなかに建つ木張りの外観をいかしたオープンロケができます。</p>
-										<p>
-											1Fのリビングルームと2Fのアンティーク調の小リビングルームを使い分けながらテイストのことなる2つの個室が撮影シーン幅をひろげます。
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="overlay"></div>
-						</div>
-						<div class="mb-5" class="l-image-slider row">
-							<ul id="image-slider-wood" class="list-inline image-slider">
-								<li class="list-inline-item" v-for="(image, index) in images">
-									<a v-bind:href="'images/slider_wood_' + image.name" target="_blank">
-										<img class="img-fluid" v-bind:src="'images/slider_wood_' + image.name" v-bind:alt="'STUDIO PHOTOS - wood' + (index + 1)">
-									</a>
-								</li>
-							</ul>
-						</div>
-					</section>
 					<!-- レンガ館 -->
-					<section class="my-5">
+					<section class="my-5 pb-10">
 						<div class="mb-4 bg-image bg-image-bricks position-relative d-flex align-items-center">
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-sm-6 d-flex align-items-center justify-content-center">
-										<h3 class="text-light py-5">レンガ館</h3>
+										<h3 class="text-light py-5"><strong>レンガ館</strong></h3>
 									</div>
 									<div class="col-sm-6">
 										<p>暖炉を備えたリビングルームは上質な生活シーンを演出します。</p>
@@ -178,12 +153,43 @@
 							</ul>
 						</div>
 					</section>
+					<!-- ウッド館 -->
+					<section class="mb-5 l-wood-slider pb-10">
+						<div class="mb-4 bg-image bg-image-wood position-relative d-flex align-items-center">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-6 d-flex align-items-center justify-content-center">
+										<h3 class="text-light py-5"><strong>ウッド館</strong></h3>
+									</div>
+									<div class="col-sm-6">
+										<p>木立のなかに建つ木張りの外観をいかしたオープンロケができます。</p>
+										<p>
+											1Fのリビングルームと2Fのアンティーク調の小リビングルームを使い分けながらテイストのことなる2つの個室が撮影シーン幅をひろげます。
+										</p>
+										<div>
+											<a class="text-warning" href="#our-services">>> 料金表を見る</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="overlay"></div>
+						</div>
+						<div class="mb-5" class="l-image-slider row">
+							<ul id="image-slider-wood" class="list-inline image-slider">
+								<li class="list-inline-item" v-for="(image, index) in images">
+									<a v-bind:href="'images/slider_wood_' + image.name" target="_blank">
+										<img class="img-fluid" v-bind:src="'images/slider_wood_' + image.name" v-bind:alt="'STUDIO PHOTOS - wood' + (index + 1)">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</section>
 				</div>
 			</section>
 
 			<section class="pb-10">
 				<div class="container">
-					<h2 class="heading">OUR SERVICES</h2>
+					<h2 id="our-services" class="heading h1">OUR SERVICES</h2>
 					<table class="table mb-5">
 						<thead class="thead-dark">
 							<tr>
@@ -233,12 +239,12 @@
 			</section>
 
 			<section class="bg-dark pb-10" id="access">
-				<h2 class="heading">ABOUT US</h2>
+				<h2 class="heading h1">ABOUT US</h2>
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6 text-light">
 							<address>
-								<h3 class="mb-4">千里山ワークスタジオ</h3>
+								<h3 class="mb-4"><strong>千里山ワークスタジオ</strong></h3>
 								<dl>
 									<dt>住所</dt>
 									<dd>大阪府吹田市千里山西3-10-14</dd>
