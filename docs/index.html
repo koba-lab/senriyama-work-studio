@@ -56,6 +56,11 @@
 			#studio-photos .list-inline-item {
 				width: 30%;
 			}
+			@media (max-width: 767px) {
+				#studio-photos .list-inline-item {
+					width: 45%;
+				}
+			}
 			#studio-photos .list-inline-item a {
 				transition: .25s linear;
 			}
@@ -68,7 +73,7 @@
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-size: cover;
-				min-height: 30rem;
+				min-height: 25rem;
 			}
 			.bg-image-wood {
 				background-image: url(images/bg-image-wood.jpg);
@@ -77,12 +82,12 @@
 				background-image: url(images/bg-image-bricks.jpg);
 			}
 
-			.bg-image-wood .row {
+			.bg-image .container-fluid {
 				z-index: 2;
 			}
 
-			.l-image-slider {
-
+			.l-wood-slider {
+				margin-bottom: 20vw;
 			}
 
 			.image-slider {
@@ -114,22 +119,25 @@
 		</div>
 		<main>
 			<section class="bg-dark pb-10">
-				<div id="studio-photos" class="container-fluid">
-					<h2 class="heading">STUDIOS</h2>
-					<section class="mb-5">
-						<div class="mb-4 row bg-image bg-image-wood position-relative">
-							<div class="overlay"></div>
-							<div class="row align-items-center justify-content-center">
-								<div class="col-sm-6 d-flex align-items-center justify-content-center">
-									<h3 class="text-light py-5">ウッド館</h3>
-								</div>
-								<div class="col-sm-6">
-									<p>木立のなかに建つ木張りの外観をいかしたオープンロケができます。</p>
-									<p>
-										1Fのリビングルームと2Fのアンティーク調の小リビングルームを使い分けながらテイストのことなる2つの個室が撮影シーン幅をひろげます。
-									</p>
+				<h2 class="heading">STUDIOS</h2>
+				<div id="studio-photos">
+					<!-- ウッド館 -->
+					<section class="mb-5 l-wood-slider">
+						<div class="mb-4 bg-image bg-image-wood position-relative d-flex align-items-center">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-6 d-flex align-items-center justify-content-center">
+										<h3 class="text-light py-5">ウッド館</h3>
+									</div>
+									<div class="col-sm-6">
+										<p>木立のなかに建つ木張りの外観をいかしたオープンロケができます。</p>
+										<p>
+											1Fのリビングルームと2Fのアンティーク調の小リビングルームを使い分けながらテイストのことなる2つの個室が撮影シーン幅をひろげます。
+										</p>
+									</div>
 								</div>
 							</div>
+							<div class="overlay"></div>
 						</div>
 						<div class="mb-5" class="l-image-slider row">
 							<ul id="image-slider-wood" class="list-inline image-slider">
@@ -141,21 +149,24 @@
 							</ul>
 						</div>
 					</section>
+					<!-- レンガ館 -->
 					<section class="my-5">
-						<div class="mb-4 row bg-image bg-image-wood position-relative">
-							<div class="overlay"></div>
-							<div class="row align-items-center justify-content-center">
-								<div class="col-sm-6 d-flex align-items-center justify-content-center">
-									<h3 class="text-light py-5">レンガ館</h3>
-								</div>
-								<div class="col-sm-6">
-									<p>暖炉を備えたリビングルームは上質な生活シーンを演出します。</p>
-									<p>
-										L字型のキッチンは引きも十分で明るく暖かみのある絵作りができ、
-										バスルームも明るく清潔感に溢れています。
-									</p>
+						<div class="mb-4 bg-image bg-image-bricks position-relative d-flex align-items-center">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-6 d-flex align-items-center justify-content-center">
+										<h3 class="text-light py-5">レンガ館</h3>
+									</div>
+									<div class="col-sm-6">
+										<p>暖炉を備えたリビングルームは上質な生活シーンを演出します。</p>
+										<p>
+											L字型のキッチンは引きも十分で明るく暖かみのある絵作りができ、
+											バスルームも明るく清潔感に溢れています。
+										</p>
+									</div>
 								</div>
 							</div>
+							<div class="overlay"></div>
 						</div>
 						<div class="mb-5" class="l-image-slider row">
 							<ul id="image-slider-bricks" class="list-inline image-slider">
